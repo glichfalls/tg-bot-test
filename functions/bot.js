@@ -9,7 +9,11 @@ bot.start(ctx => {
     console.error("error in start action:", e)
     return ctx.reply("Error occured")
   }
-})
+});
+
+bot.command('meddl', (ctx) => {
+  return ctx.reply(Math.random());
+});
 
 // AWS event handler syntax (https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html)
 exports.handler = async event => {
